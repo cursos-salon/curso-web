@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="style-new-text.css">
+    <title>🍊</title>
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase.js"></script>
+    <script src="app.js"></script>
+      <h1 class="title">New product</h1>
+      <div class="container">
+        <input type="text" placeholder="Nombre..." id="nombre_producto" class="product-name">   
+        <input type="number" placeholder="Cantidad..." id="cantidad_producto" class="product-quantity" min="0">      
+        <textarea placeholder="Descripcion..." id="desc_producto" class="product-description" rows="8"></textarea>
+        <img class="product-image" src="hola.png">
+        <button class="send-button" onclick="new_product()">Done</button>
+      </div>
+  </body>
+</html>

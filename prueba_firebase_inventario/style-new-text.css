@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FF8B8B;
+}
+a {
+    text-decoration: none;
+}
+.title {
+    color: white;
+    margin-left: 410px;
+}
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 40%;
+    box-shadow: 0px 2px 5px rgba(255,139,139, .5);
+    background-color:white;
+    display: grid;
+    justify-items: center;
+    border-radius: 30px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    grid-template-areas: 
+    "nombre cantidad"
+    "descripcion descripcion"
+    "imagen imagen"
+    "boton boton";
+    margin-left: auto;
+    margin-right: auto;
+}
+input, textarea {
+    background-color: #F0F0F0;
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+input:focus, textarea:focus {
+    outline: none;
+}
+.product-name {
+    width: 90%;
+}
+.product-quantity {
+    width: 90%;
+}
+.product-description {
+    grid-area: descripcion;
+    width: 95%;
+}
+.product-image {
+    grid-area: imagen;
+    width: 20%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.send-button {
+    grid-area: boton;
+    border-radius: 25px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: #FF8B8B;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

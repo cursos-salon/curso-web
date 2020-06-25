@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.titulo {
+    color: #FF8B8B;
+    margin-left: 45px;
+}
+ul {
+    list-style: none;
+}
+li {
+    margin-top: 20px;
+}
+.product-container {
+    width: 90%;
+    display: grid;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(255,139,139, .5);
+    border-radius: 50px;
+    grid-template-columns:10% auto 8% 8%;
+    padding-right: 5px;
+}
+.less-product {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    background-color: #FF8B8B;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    align-self: center;
+}
+.product-name {
+    font-size: 20px;
+}
+.product-quantity:focus, .send-button:focus, .new-product:focus {
+    outline: none;
+}
+.send-button:active, .new-product:active {
+    background-color: #d67373;
+}
+.product-quantity {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: 2px solid #FF8B8B;
+    padding-left: 20px;
+    height: 30px;
+    text-align: center;
+    align-self: center;
+    color: #FF8B8B;
+    font-size: 20px;
+}
+.send-button {
+    background-color: #FF8B8B;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: none;
+    color: white;
+    height: 36px;
+    font-size: 30px;
+    border: 2px solid #FF8B8B;
+    align-self: center;
+    cursor: pointer
+}
+.new-product-container {
+    display: none;
+    grid-template-rows: 10% auto auto 10%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.new-product {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    background-color: #FF8B8B;
+    box-shadow: 0px 3px 20px rgba(255,139,139, .5);
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
