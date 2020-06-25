@@ -29,6 +29,7 @@ function new_product() {
 function update_units(id) {
     firebase.database().ref("productos/" + id).set({
         nombre: document.getElementById(id + "_nombre").innerHTML,
+        descripcion: document.getElementById("desc_producto").value,
         cantidad: document.getElementById(id + "_cantidad").value
     })
     get_data()

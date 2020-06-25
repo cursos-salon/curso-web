@@ -1,0 +1,26 @@
+body {
+    font-family: 'Krona One', sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+    "nombre cantidad"
+    "descripcion descripcion"
+    "imagen imagen"
+    "boton boton";
+}
+.product-name {
+    grid-area: nombre;
+}
+.product-quantity {
+    grid-area: cantidad;
+}
+.product-description {
+    grid-area: descripcion;
+}
+.product-image {
+    grid-area: imagen;
+}
+.product-button {
+    grid-area: boton;
+}

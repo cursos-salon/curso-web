@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    background-color: #38cf60;
+    border: 5px dotted #d34ad8;
+    font-size: 20px;
+    cursor: pointer;
+}
+#altura {
+    color: blue;
+}
+.zapatos {
+    color: red
+}
+#color {
+    color:green;
+}
+.cabello {
+    color:black;
+}
+img {
+    width: 200px;
+    height: 300px;
+}
+.contenedor {
+    background-color: blanchedalmond;
+    border-radius: 20px;
+    box-shadow: 10px 12px 20px black;
+    display: grid;
+    grid-template-rows: 10% 2% 1% 20% 10% 70%;
+}
