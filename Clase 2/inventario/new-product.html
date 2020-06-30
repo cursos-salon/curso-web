@@ -5,15 +5,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
         <title>New product</title>
         <link rel="stylesheet" type="text/css" href="new-product-style.css">
+        <script src="app.js"></script>
     </head>
     <body>
-        <h1 class="title">New product</h1>
+        <button onclick="cambiar_idioma()">Cambiar a Español</button>
+        <h1 class="title" id="titulo_producto">New product</h1>
         <div class="container">
-            <input type="text" class="product-name" placeholder="Nombre...">
-            <input type="number" class="product-quantity" placeholder="Cantidad...">
-            <textarea placeholder="Descripcion..." class="product-description" row="8"></textarea>
+            <input type="text" class="product-name" id="product-name" placeholder="Nombre...">
+            <input type="number" class="product-quantity" id="product-quantity" placeholder="Cantidad...">
+            <textarea placeholder="Descripcion..." class="product-description" id="product-description" row="8"></textarea>
             <img class="product-image" src="../imagenes/gato.jpg">
-            <button class="send-button">Done</button>
+            <button class="send-button" onclick="verificar()">Done</button>
         </div>
     </body>
 </html>
