@@ -13,5 +13,14 @@ function contar_velas(velas){
     }
     alert("El numero de velas sopladas es: "+velas_sopladas+" con altura de: "+vela_mas_alta)
 }
+
+function fact(){
+    var num=document.getElementById("fact").value
+    var res= 1
+    for(var i =1;i<=num;i++){
+        res*=i
+    }
+    alert(res)
+}
 var velas= [1,2,4,2]
 contar_velas(velas)
