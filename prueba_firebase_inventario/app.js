@@ -36,35 +36,32 @@ function update_units(id) {
 }
 
 function delete_unit(id) {
-    var adaRef = firebase.database().ref('productos/'+id);
-    adaRef.remove()
-        .then(function () {
-            console.log("Remove succeeded.")
-        })
-        .catch(function (error) {
-            console.log("Remove failed: " + error.message)
-        });
+    firebase.database().ref('productos/'+id).remove()
     get_data()
 }
 
 function get_data() {
-    firebase.database().ref("/").once("value", function (snapshot) {
-        snapshot.forEach(function (childSnapshot) {
-            var childKey = childSnapshot.key
-            var childData = childSnapshot.val()
+    firebase.database().ref("/").once("value", function (base_datos) {
+        base_datos.forEach(function (productos) {
+            var datos_producto = productos.val()
             var results = document.getElementById('product-list');
             if (results) {
                 results.innerHTML = "";
-                for (var obj in childData) {
-                    tmp = obj.toString()
+                for (var dato in datos_producto) {
+                    tmp = dato.toString()
                     //Loop through the object to get each objects data
-                    results.innerHTML += `<li><div class="product-container"><button class="less-product" onclick="delete_unit('${tmp}')">-</button><p class="product-name" id="${tmp}_nombre"> ${childData[obj].nombre} </p><input value="${childData[obj].cantidad}" class="product-quantity" type="text" placeholder="##" id= "${obj.toString()}_cantidad"> <button onclick="update_units('${tmp}')" class="send-button material-icons">arrow_right_alt</button> </div></li>`;
+                    results.innerHTML += 
+                    `<li>
+                    <div class="product-container">
+                    <button class="less-product" onclick="delete_unit('${tmp}')">-</button>
+                    <p class="product-name" id="${tmp}_nombre"> ${datos_producto[dato].nombre} </p>
+                    <input value="${datos_producto[dato].cantidad}" class="product-quantity" type="text" placeholder="##" id= "${tmp}_cantidad">
+                     <button onclick="update_units('${tmp}')" class="send-button material-icons">arrow_right_alt</button> </div></li>`;
                 }
             }
-
-
         })
     })
 }
 
 get_data()
+

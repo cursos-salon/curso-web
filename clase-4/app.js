@@ -11,6 +11,13 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
+  function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+
   function get_data(){
       firebase.database().ref("/").once("value",function (base_datos){
         var html = document.getElementById("resultados")  
@@ -29,7 +36,7 @@ var firebaseConfig = {
         nombre:nombre_html,
         edad: edad_html
     }
-    firebase.database().ref("/").set(nuevos_datos)
+    firebase.database().ref("personas/" + uuidv4()).set(nuevos_datos)
     get_data()
 }
 
