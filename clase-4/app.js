@@ -24,7 +24,8 @@ var firebaseConfig = {
         html.innerHTML=""
         base_datos.forEach(function (dato){
               var valor = dato.val()
-              html.innerHTML+= `<li>${valor}</li>` //"<li>"+dato+
+              console.log(valor)
+              html.innerHTML+= `<li>${valor.nombre}</li>` //"<li>"+dato+
           })
       })
   }
