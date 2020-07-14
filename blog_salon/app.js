@@ -21,7 +21,8 @@ function post_blog(){
     var blog ={
         autor: document.getElementById("author").value,
         titulo: document.getElementById("input-title").value,
-        blog: document.getElementById("input-blog").value
+        blog: document.getElementById("input-blog").value,
+        date:Date.now()
     }
     firebase.database().ref("blogs/"+uuidv4()).set(blog)
     document.getElementById("author").value=""
@@ -32,7 +33,8 @@ function post_blog(){
 function get_data() {
     firebase.database().ref("/").once("value", function (base_datos) {
         base_datos.forEach(function (blogs) {
-            var posts = blogs.val()
+            var posts = Object.values(blogs.val()).sort((a,b)=>(a.date>b.date)?1:-1)
+            console.log(typeof posts)
             var results = document.getElementById('blogs-container');
             if (results) {
                 results.innerHTML = "";
